@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3Snet Test Execution Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div>
+                <h1>E2E Test Dashboard</h1>
+                <p class="subtitle">Playwright Execution Environment</p>
+            </div>
+            <div class="header-meta">
+                <span id="lastRunTime" class="text-muted">Loading...</span>
+            </div>
+        </header>
+
+        <div class="actions-panel panel">
+            <div class="panel-info">
+                <h2>Test Runner</h2>
+                <p class="text-muted">Trigger headless execution suite across configured browsers.</p>
+            </div>
+            <div class="panel-action">
+                <button class="btn btn-primary" id="runBtn" onclick="runTests()">
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" width="16"
+                        style="margin-right: 8px; fill: currentColor;">
+                        <path fill-rule="evenodd"
+                            d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM6.379 5.227A.25.25 0 006 5.442v5.117a.25.25 0 00.379.214l4.264-2.559a.25.25 0 000-.428L6.379 5.227z">
+                        </path>
+                    </svg>
+                    <span id="btnText">Run Test Suite</span>
+                    <span class="loader" id="loader"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card panel">
+                <div class="stat-title">Passed Tests</div>
+                <div class="stat-value text-success" id="valPassed">-</div>
+            </div>
+            <div class="stat-card panel">
+                <div class="stat-title">Failed Tests</div>
+                <div class="stat-value text-danger" id="valFailed">-</div>
+            </div>
+            <div class="stat-card panel">
+                <div class="stat-title">Last Execution Time</div>
+                <div class="stat-value" id="valDuration">-</div>
+            </div>
+        </div>
+
+        <div class="history-panel panel">
+            <div class="panel-header">
+                <h2>Execution History</h2>
+            </div>
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th width="35%">Timestamp</th>
+                            <th width="15%">Build Status</th>
+                            <th width="15%">Passed</th>
+                            <th width="15%">Failed</th>
+                            <th width="20%">Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyBody">
+                        <!-- Dynamic Rows Injected by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

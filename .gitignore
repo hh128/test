@@ -5,3 +5,7 @@ node_modules/
 /allure-results/
 /allure-report/
 *.log
+
+# Dashboard history files
+test-history.json
+debug-report.json
