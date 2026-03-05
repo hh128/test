@@ -1,6 +1,6 @@
 # E2E-Автотесты для Events Widget
 
-Репозиторий содержит E2E-автотесты для виджета [Events Calendar], написанные на Playwright + TypeScript.
+Репозиторий содержит E2E-автотесты для виджета [Events Calendar](https://dev.3snet.info/eventswidget/), написанные на Playwright + TypeScript.
 
 ## Стек
 * **Playwright** (тест-раннер и браузерный движок)
